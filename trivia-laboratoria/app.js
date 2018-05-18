@@ -4,9 +4,12 @@ var mostrarResultados = document.getElementById('contenedorPrincipal');
 var respuestasCorrectas = document.getElementById('respuestasCorrectas');
 var respuestasIncorrectas= document.getElementById('respuestasIncorrectas');
 
-
-var nombreUsuario = prompt("Ingresa tu nombre:");
-saludarUsario.innerHTML = "😊 Bienvenid@ " + nombreUsuario + " 😊" ;
+window.onload = function(){
+    document.getElementById('boton').onclick=function(){
+    var content = document.getElementById('text').value;
+    document.getElementById('resultado').innerHTML = content; 
+    }
+}
 
 var iniciarPartida = parseInt(prompt("Ingresa el número que corresponda a tu respuesta \n ¿Quieres iniciar la partida? \n 1.Si \n 2.No"));
 
